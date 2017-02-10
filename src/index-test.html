@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>High Side React Test</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+<!-- 	<div id="root"></div> -->
+	<form>
+		<h3>Username</h3>
+		<input type="text" id="user_login" placeholder="Username">
+		<h3>Password</h3>
+		<input type="password" id="user_pwd" placeholder="Password">
+		<button type="submit" id="button">Submit</button>
+	</form>
+	<!-- <script type="text/javascript" src="bundle.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var button = document.getElementById('button');
+		button.addEventListener('click', function(e) {
+			e.preventDefault();
+			// Get the form data
+			var data = {
+				user_login: encodeURIComponent(document.getElementById('user_login').value),
+				user_pwd: encodeURIComponent(document.getElementById('user_pwd').value)
+			};
+			// Log data to check if correct
+			console.log(data);
+
+			// jquery AJAX test
+			// $.post('http://apitest.icfrog.com/api/public/login?method=create', function( data ) {
+			// 	console.log(data)
+			// })
+
+			$.ajax({
+		       url: 'http://apitest.icfrog.com/api/public/login?method=create',
+		       type: 'POST',
+		       data: {
+		           user_login : 'apitest1',
+		           user_pwd: 'apitest1'
+		       },
+		       contentType: "application/x-www-form-urlencoded",
+		       success: function(data){
+		           console.log("SUCCESS");
+		           console.log(data)
+		       },
+		       error: function(xhr, status, err) {
+		           console.log('meh', xhr.status);
+		       }
+		   });
+
+			// // Create new request
+			// var request = new XMLHttpRequest();
+			// // Set type to POST and provide URL
+			// request.open('POST', 'http://apitest.icfrog.com/api/public/login?method=create');
+			// // Set header
+			// request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			// // Send the request to the API
+			// request.send(data);
+
+			// request.onload = function() {
+			// 	// Check if request successful and log response
+			// 	if (request.status >= 200 && request.status < 400) {
+			// 		// Success!
+			// 		console.log('Success!')
+			// 		var resp = request.responseText;
+			// 		console.log(resp)
+			// 	} else {
+			// 		// Something went wrong; Error!
+			// 		console.log("error")
+			// 		console.log(request.responseText)
+			// 	}
+			// };
+		});
+	</script>
+</body>
+</html>

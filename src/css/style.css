@@ -1,0 +1,71 @@
+body {
+	padding-bottom: 150px;
+	background-color: #EFEFEF;
+}
+
+h1, h2, h3, h4, h5, h6, p,
+label {
+	color: #2B3A42;
+}
+
+.navbar {
+	background-color: #BDD4DE;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:visited,
+.navbar-default .navbar-brand:active {
+	color: #2B3A42;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:visited,
+.navbar-default .navbar-nav>li>a:active {
+	color: #2B3A42;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #FF530D;
+}
+
+.navbar-fixed.bottom {
+	height: 50px;
+}
+
+.jumbotron {
+	background-color: #EFEFEF;
+}
+
+.jumbotron > h1 {
+	color: #FF530D;
+}
+
+.btn-default {
+	color: #EFEFEF;
+	background-color: #FF530D;
+	border-color: #EFEFEF;
+}
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus {
+	color: #FF530D;
+	background-color: #EFEFEF;
+	border-color: #FF530D;
+}
+
+.vert-align-footer {
+	margin: 15px 0;
+	color: #2B3A42;
+}
+
+.inverse-margin {
+	margin-left: -15px;
+}
+
+.float-right {
+	float: right !important;
+}
