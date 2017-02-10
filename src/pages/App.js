@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
-import * as helpers from '../js/helpers'
+import * as helpers from '../js/helpers';
 
 import Footer 	from '../components/Footer';
 import Nav 		from '../components/Nav';
@@ -55,7 +55,7 @@ export default class App extends React.Component {
 						type: 'danger',
 						message: 'Something went wrong. Please try again.'
 					}
-				})
+				});
 			}
 		);
 	};

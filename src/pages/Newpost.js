@@ -43,7 +43,7 @@ export default class Home extends React.Component {
 					message: 'Something went wrong. Please try again.'
 				});
 			}
-		)
+		);
 	};
 
 	render() {

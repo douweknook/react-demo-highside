@@ -23,7 +23,6 @@ export default class Blog extends React.Component {
 			'/blog/posts/?method=get',
 			{ authToken: this.props.token },
 			(response) => {
-				console.log(response);
 				this.setState({
 					data: response.data.data
 				});
@@ -39,8 +38,8 @@ export default class Blog extends React.Component {
 			'POST', 
 			'/blog/posts/' + post_id + '/?method=remove',
 			{ authToken: this.props.token },
-			(response) => {
-				this.getBlogPosts()
+			() => {
+				this.getBlogPosts();
 			}
 		);
 	};
